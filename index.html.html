@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen en el Centro</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .button-container {
+            position: absolute;
+            bottom: 130px; /* Mantener la posición ajustada */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px; /* Separación entre los botones */
+            flex-wrap: wrap; /* Permitir que los botones se envuelvan si es necesario */
+        }
+        .button {
+            flex: 1 1 auto; /* Permitir que los botones se ajusten al tamaño del contenedor */
+            padding: 15px 30px;
+            background-color: #3366cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            margin: 5px;
+        }
+        .button:hover {
+            background-color: #2851a3;
+        }
+        .button-no {
+            background-color: #cc3333;
+        }
+        .button-no:hover {
+            background-color: #a32828;
+        }
+        .button-yes {
+            background-color: #33cc33;
+        }
+        .button-yes:hover {
+            background-color: #28a328;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="fondo.png" alt="Imagen central">
+        <div class="button-container">
+            <a href="https://ejemplo.com/no-confirmar" class="button button-no">No Confirmo mi Asistencia</a>
+            <a href="https://ejemplo.com/si-confirmar" class="button button-yes">Sí Confirmo mi Asistencia</a>
+        </div>
+    </div>
+</body>
+</html>
